@@ -167,7 +167,7 @@ public class Sapins
         }
         return ligneMatrice;
     }
-    public static void principal ()
+    public static void main (String[] args)
     {
         Scanner clavier = new Scanner(System.in) ;
         System.out.println("Quelle figure voulez-vous afficher ?");
