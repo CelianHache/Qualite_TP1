@@ -1,0 +1,52 @@
+@options
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'8'
+-sourcepath
+'c:/Users/celia/OneDrive/Documents/GitHub/Qualite_TP1/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'c:/Users/celia/OneDrive/Documents/GitHub/Qualite_TP1/target/site/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'tp_qualite 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'c:/Users/celia/OneDrive/Documents/GitHub/Qualite_TP1/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'tp_qualite 1.0 API'
+'c:/Users/celia/OneDrive/Documents/GitHub/Qualite_TP1/src/main/java/HelloJava.java'
+'c:/Users/celia/OneDrive/Documents/GitHub/Qualite_TP1/src/main/java/Sapins.java'
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\src\main\java\HelloJava.java = 1695994044433
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\src\main\java\Sapins.java = 1695994121260
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\src\main\java = 1695992706843
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\allclasses-index.html = 1695994939480
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\allpackages-index.html = 1695994939483
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\element-list = 1695994939422
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\help-doc.html = 1695994939507
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\index-all.html = 1695994939499
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\index.html = 1695994939502
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\jquery-ui.overrides.css = 1695994939525
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\member-search-index.js = 1695994939488
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\module-search-index.js = 1695994939485
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\overview-tree.html = 1695994939465
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\package-search-index.js = 1695994939486
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\package-summary.html = 1695994939443
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\package-tree.html = 1695994939448
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\package-use.html = 1695994939462
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\Sapins.html = 1695994939420
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\script.js = 1695994939513
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\search.js = 1695994939515
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\stylesheet.css = 1695994939510
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\tag-search-index.js = 1695994939490
+c:\Users\celia\OneDrive\Documents\GitHub\Qualite_TP1\target\site\apidocs\type-search-index.js = 1695994939487
