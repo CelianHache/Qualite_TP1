@@ -6,7 +6,7 @@
 class HelloJava {
 
 	public static void main(String[] args) {
-		System.out.println("Hello Blagnac");
+		System.out.println("Hello Blagnac 2e version");
 	}
 
 	public void afficherCancan(){
