@@ -1,132 +1,84 @@
-= Compiler et construire ses applications avec maven
-Jean-Michel Bruel <jbruel@gmail.com>
-v22.1, 2022-09-04 : BUT 2 version
-//v1, 2022-02-20 : Initial draft
-:icons: font
-:diagrams: .
-:experimental:
-:classroom-link: https://classroom.github.com/a/gWXnQmIT
-:imagesdir: images
+= Préparation du projet Qualite_TP1 avec Maven
 
-// Useful definitions
-:eclipse: http://www.eclipse.org[Eclipse]
-:intellij: https://www.jetbrains.com/idea/[IntelliJ]
-:maven: http://maven.apache.org/[Maven]
-:vscode: https://code.visualstudio.com/[VS Code]
-
-// Specific to GitHub
-ifdef::env-github[]
+:author: Votre Nom
+:date: 29 septembre 2023
 :toc:
-:tip-caption: :bulb:
-:note-caption: :information_source:
-:important-caption: :heavy_exclamation_mark:
-:caution-caption: :fire:
-:warning-caption: :warning:
-:icongit: Git
-endif::[]
 
-//---------------------------------------------------------------
+== Introduction
 
-Ce TP vise à être capable de compiler un fichier Java sans être dépendant de son IDE favori.
-Cela permet :
+Ce README explique les étapes nécessaires pour préparer le projet Java "Qualite_TP1" en utilisant Maven. Le processus comprend la commande "clean" pour nettoyer les fichiers temporaires, la commande "compile" pour compiler le code source, la commande "package" pour créer un fichier JAR exécutable, et enfin, la génération de la documentation Javadoc pour le projet.
 
-- d'être indépendant de tout IDE
-- de faire construire l'application de manière automatique (c'est pour plus tard, mais c'est ce qu'on appelle l'intégration continue)
+== Prérequis
 
-== Mise en place
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre système :
 
-WARNING: Les illustrations utilisent {vscode}, mais peu importe que vous utilisiez un autre IDE comme {eclipse} ou {intellij}, il vous suffit d'adapter à votre IDE (qu'il vous faut apprendre à connaître).
+1. [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) - Java Development Kit (version 8 ou supérieure).
+2. [Apache Maven](https://maven.apache.org/download.cgi) - Outil de gestion de projet Java.
 
-Le plus simple pour réaliser ce TP est d'utiliser gitpod : rajoutez `gitpod.io/#` devant l'URL de votre dépôt ou cliquez sur le bouton Gitpod si vous en avez un qui s'affiche.
-Mais nous vous conseillons d'utiliser plutôt votre IDE personnel, pour vérifier que votre machine est bien configurer pour l'utiliser pour tous les TPs à suivre (et pouvoir travailler même sans réseau!).
+== Instructions
 
-.Pour les utilisateurs des machines IUT (merci à Rémy Guibert)
-[WARNING]
-====
-Pour ceux qui veulent lancer les commandes {maven} sur leur machine :
+Pour préparer le projet "Qualite_TP1" avec Maven, suivez ces étapes :
 
-. Placez vous dans le répertoire cloné (par exemple `r3-04-td1-maven-Dupont`)
-. Ouvrez une invite de commande Windows (CMD) dans ce répertoire
-. Tapez la commande :
-+
-....
-set JAVA_HOME=C:\Program Files\Java\jdk-17.0.1
-....
-+
-. Vous pouvez maintenant taper les commandes {maven}
+=== Étape 1: Clonage du projet
 
-Vous pouvez aussi importer dans eclipse votre projet maven puis faire exécuter à eclipse votre `pom.xml` (menu:Run as...[Maven]).
-====
+Clonez le projet depuis son référentiel Git en utilisant la commande suivante :
 
-== C'est parti
-
-=== 1ère compilation : erreur de comilation
-
-WARNING: Les étapes suivantes utilisent les commandes {maven} en ligne de commande, c'est à dire à taper dans un terminal linux, mais vous pouvez utiliser l'équivalent en "click de souris" de votre IDE favori.
-
-. Lancer `mvn clean`
-+
-C'est une bonne habitude à prendre (de nettoyer tout ce qui a pu se passer avant).
-+
-. Lancer `mvn compile`
-+
-Observez l'erreur de compilation qui en résulte.
-Par exemple :
-+
-.Erreur de compilation
-image::error1.png["Erreur de compilation", width=80%]
-+
-. Corrigez le code en conséquence.
-+
-.Erreur corrigée
-image::success1.png["Erreur éliminée", width=80%]
-+
-. Observez la création du répertoire `target` qui contient entre autre la version compilée `HelloJava.class` dans le répertoire `target/classes`.
-
-=== 2ème compilation : construire une application
-
-On ne peut malheureusement pas exécuter d'application puisqu'on n'a pas de main.
-
-. Ajoutez un `main` dans la classe.
-+
-[%collapsible]
-====
-[source,java]
+[source,shell]
 ----
-class HelloJava {	
-        public static void main(String[] args) {
-		System.out.println("Hello Blagnac");
-	}
-
-	public void afficherCancan(){
-	}
-}
+git clone <URL_DU_REPO>
 ----
-====
-+
-. Une fois que vous avez réussi à compiler (`mvn compile`), lancez la fabrication d'une version exécutable :
-+
-....
+
+Remplacez `<URL_DU_REPO>` par l'URL du référentiel Git de votre projet.
+
+=== Étape 2: Accéder au répertoire du projet
+
+Accédez au répertoire du projet en utilisant la commande suivante :
+
+[source,shell]
+----
+cd Qualite_TP1
+----
+
+=== Étape 3: Nettoyage du projet
+
+Pour nettoyer les fichiers temporaires et les artefacts de build précédents, exécutez la commande "clean" de Maven :
+
+[source,shell]
+----
+mvn clean
+----
+
+=== Étape 4: Compilation
+
+Compilez le code source Java en utilisant la commande "compile" de Maven :
+
+[source,shell]
+----
+mvn compile
+----
+
+=== Étape 5: Package JAR
+
+Créez un fichier JAR exécutable en utilisant la commande "package" de Maven. Le fichier JAR sera généralement créé dans le répertoire "target" du projet.
+
+[source,shell]
+----
 mvn package
-....
-+
-. Observez la création du fichier JAR et testez-le :
-....
-java -jar target/tp_qualite-1.0.jar
-....
+----
 
-.Et voilà!
-image::success2.png["Ca run!", width=80%]
+=== Étape 6: Génération de la documentation Javadoc
 
-== Améliorations
+Générez la documentation Javadoc pour le projet en utilisant la commande suivante :
 
-. Reprenez un de vos exercices précédents et mettez les sources dans `src/java`.
-. Ajustez éventuellement le `pom.xml` pour que les étapes précédentes produisent les résultats escomptés. Pensez à vérifier que votre fichier .jar est exécutable. Que devez-vous corriger dans votre pom.xml ? Quelle est la commande pour le lancer ?
-. Ajoutez les commentaires vus en dev.
-. Cherchez dans la documentation {maven} les commandes permettant de générer une documentation javadoc, et les adaptions à faire sur votre projet (et éventuellement `pom.xml`) afin que {maven} génère la documentation automatiquement pour vous.
-. Documentez votre projet: remplacez le contenu de ce fichier README.doc par les instructions de compilation, de documentation et de lancement de votre projet. 
+[source,shell]
+----
+mvn javadoc:javadoc
+----
 
-== Consignes et rendus
+La documentation Javadoc sera générée dans le répertoire "target/site/apidocs".
 
-Pour ce TP, il vous faudra simplement rendre le projet complet (`src`) ainsi que la dernière version du fichier `pom.xml` sur votre dépôt et la javadoc de votre code.
+== Conclusion
 
+Votre projet Java "Qualite_TP1" est maintenant prêt à être exécuté avec le fichier JAR généré et vous disposez également de la documentation Javadoc pour référence. N'hésitez pas à personnaliser ce README en fonction de votre projet spécifique et de ses besoins.
+
+Pour plus d'informations sur l'utilisation de Maven, consultez la [documentation officielle de Maven](https://maven.apache.org/guides/index.html).
